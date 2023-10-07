@@ -1,7 +1,14 @@
-const cards = () => {
-  return (
-    <div className="col-4">cards</div>
-  )
-}
+const cards = ({ results }) => {
+  let display;
+  console.log(results);
 
-export default cards
+  if (results) {
+    display = results.map((x) => {});
+  } else {
+    display = "no characters found :/";
+  }
+
+  return <>{display}</>;
+};
+
+export default cards;
