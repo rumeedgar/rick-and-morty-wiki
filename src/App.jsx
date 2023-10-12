@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <h1 className="text-center ubuntu my-5">
-        Rick & Morty <span className="text-primary">wiki</span>
+        Rick & Morty <span className="text-dark">wiki</span>
       </h1>
 
       <Search setPageNumber={setPageNumber} setSearch={setSearch} />

@@ -13,14 +13,7 @@ const search = ({ setSearch, setPageNumber }) => {
         type="text"
         className={styles.input}
       />
-      <button
-        onClick={(e) => {
-          e.preventDefault();
-        }}
-        className={`${styles.btn}btn btn-primary fs-5`}
-      >
-        Search
-      </button>
+      <button className={`${styles.btn} btn btn-dark fs-5`}>Search</button>
     </form>
   );
 };
