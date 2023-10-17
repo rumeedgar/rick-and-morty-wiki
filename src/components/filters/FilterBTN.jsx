@@ -1,6 +1,6 @@
 import React from "react";
 
-const FilterBTN = ({ name, index }) => {
+const FilterBTN = ({ name, index, items }) => {
   return (
     <div>
       <div className="form-check">
@@ -11,7 +11,7 @@ const FilterBTN = ({ name, index }) => {
           id={`${name}-${index}`}
         />
         <label class="btn btn-outline-dark" for={`${name}-${index}`}>
-          Single toggle
+          {items}
         </label>
       </div>
     </div>
