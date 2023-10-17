@@ -1,7 +1,7 @@
 import React from "react";
 import FilterBTN from "../FilterBTN";
 
-const Status = () => {
+const Status = ({ setStatus, setPageNumber }) => {
   let status = ["Alive", "Dead", "Unknown"];
   return (
     <div className="accordion-item">
@@ -22,9 +22,16 @@ const Status = () => {
         className="accordion-collapse collapse"
         data-bs-parent="#accordionExample"
       >
-        <div className="accordion-body">
+        <div className="accordion-body d-flex flex-wrap gap-2">
           {status.map((items, index) => (
-            <FilterBTN key={index} name="Status" index={index} items={items} />
+            <FilterBTN
+              task={setStatus}
+              setPageNumber={setPageNumber}
+              key={index}
+              name="Status"
+              index={index}
+              items={items}
+            />
           ))}
         </div>
       </div>

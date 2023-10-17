@@ -9,11 +9,13 @@ import Search from "./components/search/search";
 function App() {
   let [pageNumber, setPageNumber] = useState(1);
   let [search, setSearch] = useState("");
+  let [status, setStatus] = useState("");
+  let [gender, setGender] = useState("female");
 
   let [fetchedData, updateFetchedData] = useState([]);
   let { info, results } = fetchedData;
 
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}`;
 
   useEffect(() => {
     (async function () {
@@ -32,7 +34,11 @@ function App() {
 
       <div className="container">
         <div className="row">
-          <Filters />
+          <Filters
+            setGender={setGender}
+            setStatus={setStatus}
+            setPageNumber={setPageNumber}
+          />
           <div className="col-8">
             <div className="row">
               <Cards results={results} />
