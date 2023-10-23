@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Cards from "../components/cards/cards";
+import InputGroup from "../components/Filters/Category/InputGroup";
 
 const Episodes = () => {
   let [id, setID] = useState(1);
@@ -31,10 +33,15 @@ const Episodes = () => {
           Air Date {air_date === "" ? "Unknownn" : air_date}
         </h5>
       </div>
-      <div className="row">
-        <div className="col-3">Pick Episodes</div>
+      <div className="row mb-4">
+        <div className="col-3">
+          <h4 className="text-center mb-4">Pick Episode</h4>
+          <InputGroup total={51} />
+        </div>
         <div className="col-8">
-          <div className="row">Cards are here</div>
+          <div className="row">
+            <Cards results={results} />
+          </div>
         </div>
       </div>
     </div>
