@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import Filters from "./components/filters/filters";
 import Cards from "./components/cards/cards";
-import Pagination from "./components/pagination/pagination";
+import Pagination from "./components/Pagination/Pagination";
 import Search from "./components/search/search";
 import Navbar from "./components/Navbar/Navbar";
 

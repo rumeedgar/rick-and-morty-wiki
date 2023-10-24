@@ -1,24 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
-const pagination = ({ info, pageNumber, setPageNumber }) => {
+const Pagination = ({ info, pageNumber, setPageNumber }) => {
+  let [width, setWidth] = useState(window.innerWidth);
+
+  let updateDimension = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimension);
+    return () => window.removeEventListener("resize", updateDimension);
+  }, []);
   return (
-    <ReactPaginate
-      className="pagination justify-content-center gap-4 my-4"
-      forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
-      nextLabel="Next"
-      previousLabel="Prev"
-      nextclassName="btn btn-dark"
-      previousclassName="btn btn-dark"
-      pageclassName="page-item"
-      pageLinkclassName="page-link"
-      activeclassName="active"
-      onPageChange={(data) => {
-        setPageNumber(data.selected + 1);
-      }}
-      pageCount={info?.pages}
-    />
+    <>
+      <style jsx>
+        {`
+          @media (max-width: 768px) {
+            .next,
+            .prev {
+              display: none;
+            }
+            .pagination {
+              font-size: 14px;
+            }
+          }
+        `}
+      </style>
+      <ReactPaginate
+        className="pagination justify-content-center gap-4 my-4"
+        nextLabel="Next"
+        forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
+        previousLabel="Prev"
+        nextclassName="btn btn-primary next"
+        previousclassName="btn btn-primary prev"
+        pageclassName="page-item"
+        pageLinkclassName="page-link"
+        marginPagesDisplayed={width < 576 ? 1 : 2}
+        pageRangeDisplayed={width < 576 ? 1 : 2}
+        activeclassName="active"
+        onPageChange={(data) => {
+          setPageNumber(data.selected + 1);
+        }}
+        pageCount={info?.pages}
+      />
+    </>
   );
 };
 
-export default pagination;
+export default Pagination;
