@@ -14,6 +14,7 @@ const InputGroup = ({ total, name, setID }) => {
 
         {[...Array(total).keys()].map((x) => {
           return (
+            // eslint-disable-next-line react/jsx-key
             <option value={x + 1}>
               {name} - {x + 1}
             </option>
