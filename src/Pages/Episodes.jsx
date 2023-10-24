@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Cards from "./components/cards/cards";
-import InputGroup from "./components/filters/category/inputGroup";
+import Cards from "../components/cards/cards";
+import InputGroup from "../components/Filters/Category/InputGroup";
 
 const Episodes = () => {
   let [id, setID] = useState(1);
