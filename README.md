@@ -11,12 +11,33 @@ Welcome to the Rick and Morty Wiki, an interactive web application I built with 
 
 - **Search Functionality:** Quickly find your favorite characters or episodes with a robust search feature.
 ## Demo
-To try out the notes application, simply visit our website at https://rick-and-morty-wiki-sepia.vercel.app/.
+
+![App Screenshot](https://snipboard.io/sCADxr.jpg)
+
+![App Screenshot](https://snipboard.io/8m5EXN.jpg)
+
+![App Screenshot](https://snipboard.io/nHVPXy.jpg)
+
+![App Screenshot](https://snipboard.io/STBWQX.jpg)
+
+![App Screenshot](https://snipboard.io/hluCDk.jpg)
+
+![App Screenshot](https://snipboard.io/imSNl3.jpg)
+
+![App Screenshot](https://snipboard.io/ThY64p.jpg)
+
+![App Screenshot](https://snipboard.io/nkbDKu.jpg)
+
+![App Screenshot](https://snipboard.io/iz8yY9.jpg)
+
+![App Screenshot](https://snipboard.io/i4apvC.jpg)
+
+![App Screenshot](https://snipboard.io/MPZseC.jpg)
 ## Usage
 - Navigate the app to explore characters, episodes, and dimensions from the show.
 - Use the search feature to find specific characters or episodes.
 ## Technology Stack
-I built this with JavaScript, React, Bootstrap. I also made API calls to the rickandmorty API. I worked with react hooks, react components, fetch API, pagination, data filtering, and dynamic routing for this project.
+I built this with JavaScript, React, and Bootstrap. I also made API calls to the rickandmorty API. I worked with react hooks, react components, fetch API, pagination, data filtering, and dynamic routing for this project.
 ## Installation
 To run the app locally, follow these steps:
 
